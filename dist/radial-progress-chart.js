@@ -119,7 +119,7 @@
         var defs = self.svg.append("svg:defs");
         series.forEach(function(item) {
           if (item.color.linearGradient || item.color.radialGradient) {
-            var gradient = RadialProgressChart.Gradient.toSVGElement('gradient' + item.index, item.color);
+            var gradient = RadialProgressChart.Gradient.toSVGElement('gradient' + instanceIndex + item.index, item.color);
             defs.node().appendChild(gradient);
           }
         });
